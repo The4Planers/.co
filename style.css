@@ -203,3 +203,15 @@ footer {
   cursor: pointer;
   color: #aaa;
 }
+/* Success Message */
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(0, 234, 255, 0.15);
+  border: 1px solid #00eaff;
+  border-radius: 6px;
+  color: #00eaff;
+  text-align: center;
+  font-weight: bold;
+}
