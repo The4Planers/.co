@@ -138,6 +138,59 @@
   }
 </script>
 
+<!-- CONTACT BUTTON -->
+<button class="contact-btn" onclick="openPopup()">Contact Us</button>
+
+<!-- CONTACT POPUP -->
+<div id="contactPopup" class="popup-overlay">
+  <div class="popup-box">
+
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <h2>Contact Us</h2>
+
+    <form id="contactForm" action="https://formspree.io/f/mzdbzoza" method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <input type="hidden" name="_subject" value="New Contact Message">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_redirect" value="https://the4planers.github.io/.co/">
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+    <div id="successMessage" class="success-message">
+      ✔️ Message Sent Successfully!
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function openPopup() {
+    document.getElementById("contactPopup").style.display = "flex";
+  }
+
+  function closePopup() {
+    document.getElementById("contactPopup").style.display = "none";
+  }
+
+  document.getElementById("contactForm").addEventListener("submit", function () {
+    document.getElementById("successMessage").style.display = "block";
+
+    setTimeout(() => {
+      closePopup();
+      document.getElementById("contactForm").reset();
+      document.getElementById("successMessage").style.display = "none";
+    }, 2500);
+  });
+</script>
 
 </body>
 </html>
