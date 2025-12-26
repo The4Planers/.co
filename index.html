@@ -88,6 +88,25 @@
   <footer>
     <p>© 2025 The 4 Planers. All Rights Reserved.</p>
   </footer>
+<!-- Contact Button -->
+<button class="contact-btn" onclick="openPopup()">Contact Us</button>
+
+<!-- Popup Overlay -->
+<div id="contactPopup" class="popup-overlay">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <h2>Contact Us</h2>
+    <p>Let’s build something amazing 🚀</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
 
 </body>
 </html>
