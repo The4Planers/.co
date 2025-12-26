@@ -173,24 +173,6 @@
 </div>
 
 <script>
-  function openPopup() {
-    document.getElementById("contactPopup").style.display = "flex";
-  }
-
-  function closePopup() {
-    document.getElementById("contactPopup").style.display = "none";
-  }
-
-  document.getElementById("contactForm").addEventListener("submit", function () {
-    document.getElementById("successMessage").style.display = "block";
-
-    setTimeout(() => {
-      closePopup();
-      document.getElementById("contactForm").reset();
-      document.getElementById("successMessage").style.display = "none";
-    }, 2500);
-  });
-</script>
 
 </body>
 </html>
