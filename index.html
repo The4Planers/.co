@@ -116,6 +116,19 @@
 </div>
 </div>
 <script>
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function () {
+    successMessage.style.display = "block";
+
+    setTimeout(() => {
+      document.getElementById("contactPopup").style.display = "none";
+      form.reset();
+      successMessage.style.display = "none";
+    }, 2500);
+  });
+
   function openPopup() {
     document.getElementById("contactPopup").style.display = "flex";
   }
@@ -124,6 +137,7 @@
     document.getElementById("contactPopup").style.display = "none";
   }
 </script>
+
 
 </body>
 </html>
