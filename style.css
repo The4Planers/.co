@@ -1,77 +1,118 @@
-/* Video background */
-#bg-video {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Background video */
+.bg-video {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
-/* Website content */
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  margin-top: 40vh;
-  font-family: Arial, sans-serif;
-}
-/* Dark overlay on video */
+/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
 }
 
-/* Main content */
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
+/* Common */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+h2 {
   text-align: center;
-  padding: 60px 20px;
-  font-family: Arial, sans-serif;
+  margin-bottom: 50px;
 }
 
-.content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+/* Hero */
+.hero {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.tagline {
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero p {
+  margin: 15px 0 30px;
   font-size: 1.2rem;
-  margin-bottom: 40px;
-  opacity: 0.9;
+  max-width: 600px;
 }
 
-/* Projects layout */
-.projects {
+.btn {
+  padding: 14px 35px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/* Services */
+.services {
+  background: #0e0e0e;
+  color: white;
+}
+
+.service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: auto;
+  gap: 30px;
 }
 
-/* Project card */
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
+.service {
+  text-align: center;
+}
+
+/* Projects */
+.projects {
+  background: #f5f5f5;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project img {
+  width: 100%;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s ease;
+  margin-bottom: 15px;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+/* About */
+.about {
+  background: #0e0e0e;
+  color: white;
+  text-align: center;
 }
 
-.card h2 {
-  margin-bottom: 10px;
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
